@@ -55,22 +55,27 @@ BarAdvance类是一个矩形的色标显示框。鼠标在框上滑动时，该�
 点击上方的“选择路径”按钮，可以输入数据。
 
 软件内置了4个数据包，分别是100.txt，1000.txt，1000_2.txt，2300.txt。每个数据包为正方形整形矩阵，名称代表矩阵的边长。其中1000_2.txt存放的是带有极端值的数据。
+
  ![](https://github.com/Sandigle/colorTagX/raw/master/image/3.jpg) 
  
 这里选取1000.txt作为示范。
+
  ![](https://github.com/Sandigle/colorTagX/raw/master/image/4.jpg) 
  
 可以看到，数据矩阵已经被上色，转换为RGB图像。左侧显示出了当前使用的色标、数据最大值、数据最大值、置信数据最大值、置信数据最大值。图像预览区下方显示出了鼠标出的颜色和坐标。
 
 此时可以在数据区下方通过滑动条调整数据置信水平和色阶数，也可以直接对置信数据值进行赋值。所有调整都能实时更新。调整结果预览图如下：
+
  ![](https://github.com/Sandigle/colorTagX/raw/master/image/5.jpg) 
  
 此时也可以通过当前色标预览框下的色标选项卡进行切换色标：
+
   ![](https://github.com/Sandigle/colorTagX/raw/master/image/6.jpg) 
   
 - 3、色标自适应功能的测试
 
 选取1000_2.txt文件进行测试。该文件的下部区域的数值被人为的翻倍。
+
  ![](https://github.com/Sandigle/colorTagX/raw/master/image/7.jpg) 
  
 可以看到数据最大值提高到了508，而软件自动将有效数据范围限制在了-23至298之前。同时，图像预览区中下方的极端数值区全部被红色覆盖，证明了该区域已经被限制。
@@ -78,6 +83,7 @@ BarAdvance类是一个矩形的色标显示框。鼠标在框上滑动时，该�
 - 4、编辑色标
 
 点击当前色标预览框右方的“编辑样式”按钮，可以进入色标编辑窗口。
+
  ![](https://github.com/Sandigle/colorTagX/raw/master/image/8.jpg) 
  
 在该窗口下，鼠标滑过色标条，下方能实时显示指针处的数据。差值空间选项卡可以切换差值方式。“色标反转”可以反转色标。同时由于该色标时内置色标，所以显示了“禁止修改”，并且“修改”和“删除”按钮被禁止。
@@ -85,7 +91,9 @@ BarAdvance类是一个矩形的色标显示框。鼠标在框上滑动时，该�
 用户可以通过鼠标直接对关键点进行修改。当鼠标按下时，如果选中了已有关键点，则可以通过鼠标进行调整。按住Shift时可以上下移动调整该点的透明度；没有按住Shift时可以左右移动调整关键点的位置；右键可以删除关键点。如果鼠标按下时没有选中已有关键点，则插入关键点。单击鼠标则在该位置创建一个属性等同于该位置像素的关键点。双击鼠标则可以创建可以自定义颜色的关键点。
 
 色标修改测试如下：
+
  ![](https://github.com/Sandigle/colorTagX/raw/master/image/9.jpg) 
+ 
  ![](https://github.com/Sandigle/colorTagX/raw/master/image/10.jpg) 
  
 这里切换了差值方式，又进行了色标反转，同时修改了已有关键点的位置和透明度，并且新增减了部分关键点。由于Jet是内置色标，所以这里只能进行“添加”操作。为了避免重名，软件会自动将色标重命名为Jet_copy。
@@ -94,7 +102,9 @@ BarAdvance类是一个矩形的色标显示框。鼠标在框上滑动时，该�
 点击左下侧的“选择路径”按钮，可以指定文件的输出路径。
 
 点击下方的“输出”按钮可以将上色结果以png格式输出。
+
 ![](https://github.com/Sandigle/colorTagX/raw/master/image/11.jpg) 
  
 输出结果图如下：
+
   ![](https://github.com/Sandigle/colorTagX/raw/master/image/12.jpg) 
