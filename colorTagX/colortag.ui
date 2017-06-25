@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>colorTagClass</class>
+ <widget class="QMainWindow" name="colorTagClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>977</width>
+    <height>772</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>色标插件</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icon.ico</normaloff>icon.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="GraphicView" name="graphicView">
+      <property name="minimumSize">
+       <size>
+        <width>500</width>
+        <height>500</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="barSimple" name="bar" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="2" column="1">
+       <widget class="QLabel" name="GLabel">
+        <property name="text">
+         <string>G:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="YLabel">
+        <property name="text">
+         <string>Y:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLineEdit" name="YLine">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLineEdit" name="XLine">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="RLabel">
+        <property name="text">
+         <string>R:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLineEdit" name="GLine">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="RLine">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="XLabel">
+        <property name="text">
+         <string>X:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="metaLabel">
+        <property name="text">
+         <string>原始数据：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLineEdit" name="metaLine">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLabel" name="BLabel">
+        <property name="text">
+         <string>B：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QLineEdit" name="BLine">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="HLabel">
+        <property name="text">
+         <string>H：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLabel" name="SLabel">
+        <property name="text">
+         <string>S:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2">
+       <widget class="QLabel" name="VLabel">
+        <property name="text">
+         <string>V:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLineEdit" name="HLine">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QLineEdit" name="SLine">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="2">
+       <widget class="QLineEdit" name="VLine">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>977</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QDockWidget" name="dockWidget">
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="QLabel" name="inPathLable">
+       <property name="text">
+        <string>输入文件路径：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLineEdit" name="inPathLine">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="inPathButton">
+         <property name="text">
+          <string>选择路径</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QLabel" name="barLabel">
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>当前色标预览：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="barButton">
+         <property name="text">
+          <string>编辑样式</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QComboBox" name="barCombo">
+       <property name="iconSize">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line">
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="1">
+        <widget class="QLabel" name="maxLabel">
+         <property name="text">
+          <string>最大值：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="minLabel">
+         <property name="text">
+          <string>最小值：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLineEdit" name="minLine">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="maxLine">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLineEdit" name="belifeMinLine"/>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLabel" name="belifeMaxLabel">
+         <property name="text">
+          <string>置信最大值：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="belifeMinLabel">
+         <property name="text">
+          <string>置信最小值：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="belifeMaxLine"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLabel" name="belifeLabel">
+       <property name="text">
+        <string>数据置信水平：（拉依达法则）</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="belifeSlider">
+       <property name="minimum">
+        <number>100</number>
+       </property>
+       <property name="maximum">
+        <number>500</number>
+       </property>
+       <property name="singleStep">
+        <number>10</number>
+       </property>
+       <property name="pageStep">
+        <number>10</number>
+       </property>
+       <property name="value">
+        <number>300</number>
+       </property>
+       <property name="sliderPosition">
+        <number>300</number>
+       </property>
+       <property name="tracking">
+        <bool>true</bool>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBothSides</enum>
+       </property>
+       <property name="tickInterval">
+        <number>50</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="segmentLabel">
+       <property name="text">
+        <string>色阶数：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="segmentSlider">
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>256</number>
+       </property>
+       <property name="singleStep">
+        <number>10</number>
+       </property>
+       <property name="value">
+        <number>50</number>
+       </property>
+       <property name="sliderPosition">
+        <number>50</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBothSides</enum>
+       </property>
+       <property name="tickInterval">
+        <number>20</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_2">
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="outPathLable">
+       <property name="text">
+        <string>输出文件路径：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLineEdit" name="outPathLine"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="outPathButton">
+         <property name="text">
+          <string>选择路径</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="outButton">
+       <property name="text">
+        <string>输出</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="authorIcon1">
+         <property name="minimumSize">
+          <size>
+           <width>75</width>
+           <height>75</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="line_3">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="authorIcon_2">
+         <property name="minimumSize">
+          <size>
+           <width>75</width>
+           <height>75</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Sandiagle</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="authorIcon_3">
+         <property name="minimumSize">
+          <size>
+           <width>75</width>
+           <height>75</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Argh</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>barSimple</class>
+   <extends>QWidget</extends>
+   <header>barsimple.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>GraphicView</class>
+   <extends>QGraphicsView</extends>
+   <header>GraphicView.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="colortag.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>inPathButton</sender>
+   <signal>clicked()</signal>
+   <receiver>colorTagClass</receiver>
+   <slot>inPath()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>360</x>
+     <y>112</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>589</x>
+     <y>87</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>outPathButton</sender>
+   <signal>clicked()</signal>
+   <receiver>colorTagClass</receiver>
+   <slot>outPath()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>360</x>
+     <y>474</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>617</x>
+     <y>209</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>barButton</sender>
+   <signal>clicked()</signal>
+   <receiver>colorTagClass</receiver>
+   <slot>barChoose()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>360</x>
+     <y>149</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>624</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>outButton</sender>
+   <signal>clicked()</signal>
+   <receiver>colorTagClass</receiver>
+   <slot>out()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>361</x>
+     <y>504</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>867</x>
+     <y>390</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>barCombo</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>colorTagClass</receiver>
+   <slot>changeTag()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>344</x>
+     <y>178</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>375</x>
+     <y>237</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>segmentSlider</sender>
+   <signal>actionTriggered(int)</signal>
+   <receiver>colorTagClass</receiver>
+   <slot>segmentChange()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>182</x>
+     <y>406</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>105</x>
+     <y>513</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>belifeSlider</sender>
+   <signal>actionTriggered(int)</signal>
+   <receiver>colorTagClass</receiver>
+   <slot>beliefChange()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>273</x>
+     <y>348</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>375</x>
+     <y>606</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>belifeMinLine</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>colorTagClass</receiver>
+   <slot>beliefMinChange()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>112</x>
+     <y>281</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>378</x>
+     <y>316</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>belifeMaxLine</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>colorTagClass</receiver>
+   <slot>beliefMaxChange()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>311</x>
+     <y>277</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>381</x>
+     <y>365</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>inPath()</slot>
+  <slot>outPath()</slot>
+  <slot>barChoose()</slot>
+  <slot>out()</slot>
+  <slot>changeTag()</slot>
+  <slot>beliefChange()</slot>
+  <slot>segmentChange()</slot>
+  <slot>beliefChange2(int)</slot>
+  <slot>beliefChange2()</slot>
+  <slot>beliefMinChange()</slot>
+  <slot>beliefMaxChange()</slot>
+ </slots>
+</ui>
