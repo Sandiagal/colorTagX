@@ -1,4 +1,4 @@
-# colorTagX
+# colorTagX ![License](https://img.shields.io/github/license/mashape/apistatus.svg)
 一款色标插件，通过编辑色标，实现了给数字矩阵上色的功能。
 
 ## 封面
